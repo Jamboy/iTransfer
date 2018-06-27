@@ -155,7 +155,7 @@ public class SendActivity extends Activity implements RadarViewGroup.IRadarClick
                     ServerManager manager = new ServerManager(sendActivityHandler, filePath);
                     manager.start();
                     isConnectIp = true;
-                    Log.i("xyz", "send create sucess");
+                    Log.i("xyz", "Group owner send create sucess");
                 } else if (info.groupFormed && !info.isGroupOwner && !isConnectIp) {
                     ServerManager2 server = new ServerManager2(sendActivityHandler, info.groupOwnerAddress.getHostAddress(), filePath);
                     server.start();
