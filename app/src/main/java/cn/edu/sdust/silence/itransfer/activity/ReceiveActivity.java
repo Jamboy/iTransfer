@@ -1,9 +1,11 @@
 package cn.edu.sdust.silence.itransfer.activity;
 
+import android.Manifest;
 import android.content.BroadcastReceiver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.wifi.WpsInfo;
 import android.net.wifi.p2p.WifiP2pConfig;
@@ -13,6 +15,8 @@ import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Bundle;
 import android.os.Looper;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -240,10 +244,18 @@ public class ReceiveActivity extends AppCompatActivity implements RadarViewGroup
                 view.findViewById(R.id.have).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(ReceiveActivity.this, CaptureActivity.class);
-                        intent.putExtra("type", CaptureActivity.TYPE_INTENT_RECEIVE);
-                        startActivity(intent);
-                        finish();
+                        if(ContextCompat.checkSelfPermission(
+                                getApplicationContext(), Manifest.permission.CAMERA)!= PackageManager.PERMISSION_GRANTED)
+                        {
+                            ActivityCompat.requestPermissions(ReceiveActivity.this,
+                                    new String[]{Manifest.permission.CAMERA},
+                                    1);
+                        } else {
+                            Intent intent = new Intent(ReceiveActivity.this, CaptureActivity.class);
+                            intent.putExtra("type", CaptureActivity.TYPE_INTENT_RECEIVE);
+                            startActivity(intent);
+                            finish();
+                        }
                     }
                 });
 
@@ -259,6 +271,22 @@ public class ReceiveActivity extends AppCompatActivity implements RadarViewGroup
                 builder.show();
             }
         });
+    }
+
+    @Override
+    public void onRequestPermissionsResult
+            (int requestCode,String[] permissions, int[] grantResults) {
+        if (requestCode == 1) {
+            if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Intent intent = new Intent(ReceiveActivity.this, CaptureActivity.class);
+                intent.putExtra("type", CaptureActivity.TYPE_INTENT_RECEIVE);
+                startActivity(intent);
+                finish();
+                //权限获取成功
+            } else {
+                //权限被拒绝
+            }
+        }
     }
 
     /**

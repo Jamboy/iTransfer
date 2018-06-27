@@ -1,12 +1,16 @@
 
 package cn.edu.sdust.silence.itransfer.activity;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.AppCompatEditText;
 import android.util.Log;
@@ -167,6 +171,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         animation.setRepeatMode(Animation.RESTART);
         scanLine.startAnimation(animation);
     }
+
 
     @Override
     protected void onResume() {
