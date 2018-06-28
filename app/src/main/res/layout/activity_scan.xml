@@ -15,21 +15,21 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/back_icon" />
 
-    <cn.edu.sdust.silence.itransfer.ui.scan.custom.RadarViewGroup
+    <com.lion.itransfer.ui.scan.custom.RadarViewGroup
         android:id="@+id/radar"
         android:layout_width="320dp"
         android:layout_height="320dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="70dp">
 
-        <cn.edu.sdust.silence.itransfer.ui.scan.custom.RadarView
+        <com.lion.itransfer.ui.scan.custom.RadarView
             android:id="@id/id_scan_circle"
             android:layout_width="320dp"
             android:layout_height="320dp" />
 
-    </cn.edu.sdust.silence.itransfer.ui.scan.custom.RadarViewGroup>
+    </com.lion.itransfer.ui.scan.custom.RadarViewGroup>
 
-    <cn.edu.sdust.silence.itransfer.ui.progress.NumberProgressBar
+    <com.lion.itransfer.ui.progress.NumberProgressBar
         android:id="@+id/progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,7 +50,7 @@
         android:visibility="gone">
 
 
-        <cn.edu.sdust.silence.itransfer.ui.loading.RotateLoading
+        <com.lion.itransfer.ui.loading.RotateLoading
             android:id="@+id/loading"
             android:layout_width="40dp"
             android:layout_height="40dp" />
@@ -69,7 +69,7 @@
     </RelativeLayout>
 
 
-    <cn.edu.sdust.silence.itransfer.ui.actionbutton.FloatingActionButton
+    <com.lion.itransfer.ui.actionbutton.FloatingActionButton
         android:id="@+id/action_to_computer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/send_to_computer_bg"
-    tools:context="cn.edu.sdust.silence.itransfer.activity.SendToComputerActivity">
+    tools:context="com.lion.itransfer.activity.SendToComputerActivity">
 
 
     <ImageView

@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:orientation="horizontal">
 
-        <cn.edu.sdust.silence.itransfer.ui.loading.RotateLoading
+        <com.lion.itransfer.ui.loading.RotateLoading
             android:id="@+id/loadingView"
             android:layout_width="50dp"
             android:layout_height="50dp"

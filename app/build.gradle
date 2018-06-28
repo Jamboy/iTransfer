@@ -5,7 +5,7 @@ android {
     buildToolsVersion '27.0.3'
 
     defaultConfig {
-        applicationId "cn.edu.sdust.silence.itransfer"
+        applicationId "com.lion.itransfer"
         minSdkVersion 14
         targetSdkVersion 23
         versionCode 1

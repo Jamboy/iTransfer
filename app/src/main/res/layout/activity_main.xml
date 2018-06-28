@@ -36,7 +36,7 @@
         android:gravity="bottom|right"
         android:weightSum="1">
 
-        <cn.edu.sdust.silence.itransfer.ui.actionbutton.FloatingActionsMenu
+        <com.lion.itransfer.ui.actionbutton.FloatingActionsMenu
             android:id="@+id/multiple_actions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,7 +46,7 @@
             fab:fab_colorPressed="@color/button_pressed"
             fab:fab_labelStyle="@style/menu_labels_style">
 
-            <cn.edu.sdust.silence.itransfer.ui.actionbutton.FloatingActionButton
+            <com.lion.itransfer.ui.actionbutton.FloatingActionButton
                 android:id="@+id/action_send"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
                 fab:fab_colorPressed="@color/button_pressed"
                 fab:fab_title="@string/activity_main_send" />
 
-            <cn.edu.sdust.silence.itransfer.ui.actionbutton.FloatingActionButton
+            <com.lion.itransfer.ui.actionbutton.FloatingActionButton
                 android:id="@+id/action_receive"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
                 fab:fab_colorPressed="@color/button_pressed"
                 fab:fab_title="@string/activity_main_receive" />
 
-        </cn.edu.sdust.silence.itransfer.ui.actionbutton.FloatingActionsMenu>
+        </com.lion.itransfer.ui.actionbutton.FloatingActionsMenu>
 
 
     </LinearLayout>
